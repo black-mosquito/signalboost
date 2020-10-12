@@ -249,6 +249,14 @@ ${channel.description ? `description: ${channel.description}` : ''}
 
 ${support}`,
   },
+  // BAN
+  ban: {
+    success: messageId => `The sender of hotline message ${messageId} has been banned.`,
+    notAdmin,
+    alreadyBanned: messageId => `The sender of hotline message ${messageId} is already banned.`,
+    dbError: num => `Whoops! There was an error trying to remove ${num}. Please try again!`,
+    invalidPhoneNumber,
+  },
 
   // INVITE
 
