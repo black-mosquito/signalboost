@@ -76,6 +76,7 @@ const findDeep = phoneNumber =>
       { model: app.db.membership },
       { model: app.db.messageCount },
       { model: app.db.destructionRequest },
+      { model: app.db.ban },
     ],
   })
 

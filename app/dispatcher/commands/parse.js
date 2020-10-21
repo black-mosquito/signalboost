@@ -107,6 +107,7 @@ const validatePayload = commandMatch => {
       return validatePhoneNumberList(commandMatch)
     case commands.VOUCH_LEVEL:
       return validateVouchLevel(commandMatch)
+    case commands.BAN:
     case commands.REPLY:
       return validateMessageId(commandMatch)
     default:
