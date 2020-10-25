@@ -1,6 +1,7 @@
 module.exports = {
   ACCEPT: ['ACEPTAR'],
   ADD: ['AGREGAR'],
+  BAN: ['PROHIBIR'],
   BROADCAST: ['TRANSMITIR', '!'],
   DECLINE: ['RECHAZAR'],
   DESTROY: ['DESTRUIR'],
