@@ -14,6 +14,7 @@ import util from '../../../app/util'
 import metrics from '../../../app/metrics'
 import channelRepository from '../../../app/db/repositories/channel'
 import membershipRepository, { memberTypes } from '../../../app/db/repositories/membership'
+import banRepository from '../../../app/db/repositories/ban'
 import messenger from '../../../app/dispatcher/messenger'
 import { genPhoneNumber } from '../../support/factories/phoneNumber'
 import { genFingerprint } from '../../support/factories/deauthorization'
@@ -51,6 +52,7 @@ describe('signal module', () => {
       sinon.stub(channelRepository, 'findDeep').returns(Promise.resolve(channel))
       sinon.stub(membershipRepository, 'resolveMemberType').returns(memberTypes.NONE)
       sinon.stub(membershipRepository, 'resolveSenderLanguage').returns(memberTypes.NONE)
+      sinon.stub(banRepository, 'isBanned').returns(Promise.resolve(false))
       sinon.stub(messenger, 'dispatch').returns(Promise.resolve())
     })
     afterEach(async () => {

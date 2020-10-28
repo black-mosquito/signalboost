@@ -532,7 +532,7 @@ describe('executing commands', () => {
             attachments,
           }),
         }
-        
+
         expect(await processCommand(dispatchable)).to.eql({
           command: commands.BAN,
           status: statuses.ERROR,
@@ -560,7 +560,7 @@ describe('executing commands', () => {
             attachments,
           }),
         }
-        
+
         expect(await processCommand(dispatchable)).to.eql({
           command: commands.BAN,
           status: statuses.SUCCESS,
