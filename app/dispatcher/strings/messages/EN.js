@@ -93,6 +93,16 @@ Reply with HELP to learn more or GOODBYE to unsubscribe.`,
     invalidPhoneNumber,
   },
 
+  // BAN
+  ban: {
+    success: messageId => `The sender of hotline message ${messageId} has been banned.`,
+    notAdmin,
+    alreadyBanned: messageId => `The sender of hotline message ${messageId} is already banned.`,
+    dbError: 'Oops! Failed to issue ban. Please try again!',
+    invalidHotlineMessageId: messageId =>
+      `Sorry, the hotline message ID @${messageId} has expired or never existed.`,
+  },
+
   // BROADCAST
   broadcast: {
     notAdmin,
@@ -248,15 +258,6 @@ subscribers: ${getSubscriberMemberships(channel).length}
 ${channel.description ? `description: ${channel.description}` : ''}
 
 ${support}`,
-  },
-  // BAN
-  ban: {
-    success: messageId => `The sender of hotline message ${messageId} has been banned.`,
-    notAdmin,
-    alreadyBanned: messageId => `The sender of hotline message ${messageId} is already banned.`,
-    dbError: 'Oops! Failed to issue ban. Please try again!',
-    invalidHotlineMessageId: messageId =>
-      `Sorry, the hotline message ID @${messageId} has expired or never existed.`,
   },
 
   // INVITE
