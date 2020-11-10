@@ -97,11 +97,8 @@ describe('dispatcher module', () => {
     processCommandStub,
     dispatchStub,
     enqueueResendStub,
-<<<<<<< HEAD
-    respondToHealthcheckStub
-=======
+    respondToHealthcheckStub,
     isBannedStub
->>>>>>> index rewrite and tests
 
   before(async () => await app.run(testApp))
 
@@ -111,13 +108,11 @@ describe('dispatcher module', () => {
 
     findDeepStub = sinon.stub(channelRepository, 'findDeep').returns(Promise.resolve(channels[0]))
 
-<<<<<<< HEAD
     respondToHealthcheckStub = sinon
       .stub(diagnostics, 'respondToHealthcheck')
       .returns(Promise.resolve('42'))
-=======
+
     isBannedStub = sinon.stub(banRepository, 'isBanned').returns(Promise.resolve(false))
->>>>>>> index rewrite and tests
 
     resolveMemberTypeStub = sinon
       .stub(membershipRepository, 'resolveMemberType')
